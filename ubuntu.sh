@@ -1,6 +1,6 @@
 #!/bash/sh
 sudo apt-get update -y
-sudo apt-get install -y sysv-rc-conf
+sudo apt-get install -y git sysv-rc-conf
 git clone https://github.com/tz1006/PPTP-IPsec.git
 
 # Install PPTP
