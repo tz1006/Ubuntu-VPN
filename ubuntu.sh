@@ -17,14 +17,14 @@ sudo cp -f ~/PPTP-IPsec/ipsec.secrets /etc/strongswan/ipsec.secrets
 sudo cp -f ~/PPTP-IPsec/strongswan.conf /etc/strongswan/strongswan.conf
 
 # Sysctl Config
-sudo sed -i 's/^net.ipv4.ip_forward.*/net.ipv4.ip_forward = 1/g' /etc/sysctl.conf
-sudo sysctl -p
+# /sbin/iptables -t nat -A POSTROUTING -s 10.0.0.0/8 -o eth0 -j MASQUERADE
+# sudo sysctl -p
+
 
 # ufw
-sudo ufw allow 
-sudo ufw allow 
 
 # Start
-sudo service pptpd start
-sudo service strongswan start
+sudo service pptpd restart
+
+sudo service strongswan restart
 sudo ipsec restart
