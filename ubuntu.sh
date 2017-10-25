@@ -31,3 +31,4 @@ sudo ipsec restart
 
 # http://www.jianshu.com/p/0588a87feff6
 # https://www.darrenfang.com/2014/01/install-pptp-vpn-on-ubuntu/
+# http://blog.liuxx.com/centos-6-4%E5%AE%89%E8%A3%85%E6%90%AD%E5%BB%BApptp-vpn%E6%9C%8D%E5%8A%A1/
