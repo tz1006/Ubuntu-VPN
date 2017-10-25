@@ -28,3 +28,6 @@ sudo service pptpd restart
 
 sudo service strongswan restart
 sudo ipsec restart
+
+# http://www.jianshu.com/p/0588a87feff6
+# https://www.darrenfang.com/2014/01/install-pptp-vpn-on-ubuntu/
