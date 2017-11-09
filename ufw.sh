@@ -1,16 +1,16 @@
 #! /bin/bash
-sudo apt-get update -y
 
-sudo apt-get install -y ufw
+# sudo apt-get install -y ufw
 # sudo apt-get install gufw
 
 sudo sed -i 's/^IPV6.*/IPV6=no/g' /etc/default/ufw
-sudo sed -i 's/^IPT_SYSCTL.*/IPT_SYSCTL=\/etc\/sysctl.conf/g' /etc/default/ufw
-sudo sed -i 's/^net\/ipv4\/conf\/all\/accept_redirects.*/net\/ipv4\/conf\/all\/accept_redirects=1/g' /etc/ufw/sysctl.conf
+sudo sed -i 's/^IPT_SYSCTL.*/IPT_SYSCTL=\/etc\/ufw\/sysctl.conf/g' /etc/default/ufw
+echo 'net\/ipv4\/ip_forward=1'>>/etc/ufw/sysctl.conf
+# sudo sed -i 's/^net\/ipv4\/conf\/all\/accept_redirects.*/net\/ipv4\/conf\/all\/accept_redirects=1/g' /etc/ufw/sysctl.conf
 # sudo sed -i 's/^net.ipv4.ip_forward.*/net.ipv4.ip_forward = 1/g' /etc/sysctl.conf
-/sbin/iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-iptables -X
 
+iptables -X
+/sbin/iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw default allow forward
@@ -24,7 +24,7 @@ sudo ufw allow 4500
 sudo ufw allow 1701
 sudo ufw allow 1723
 
-sudo ufw logging on
+sudo ufw logging off
 sudo ufw disable && sudo ufw --force enable
 # sudo ufw reset
 # https://gist.github.com/kimus/9315140
