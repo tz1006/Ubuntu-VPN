@@ -9,6 +9,8 @@ sudo sed -i 's/^IPT_SYSCTL.*/IPT_SYSCTL=\/etc\/sysctl.conf/g' /etc/default/ufw
 sudo sed -i 's/^net\/ipv4\/conf\/all\/accept_redirects.*/net\/ipv4\/conf\/all\/accept_redirects=1/g' /etc/ufw/sysctl.conf
 # sudo sed -i 's/^net.ipv4.ip_forward.*/net.ipv4.ip_forward = 1/g' /etc/sysctl.conf
 
+iptables -X
+
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw default allow forward
