@@ -23,7 +23,7 @@ sudo cp -f ~/Ubuntu-VPN/strongswan.conf /etc/strongswan.conf
 
 
 # ufw
-
+sudo bash ~/Ubuntu-VPN/ufw.sh
 # Start
 sudo service pptpd restart
 
