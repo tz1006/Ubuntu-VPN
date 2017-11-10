@@ -13,9 +13,9 @@ sudo cp -f ~/Ubuntu-VPN/pptpd.conf /etc/pptpd.conf
 
 # Install IPsec
 sudo apt-get install -y strongswan strongswan-plugin-xauth-generic
-sudo cp -f ~/Ubuntu-VPN/ipsec.conf /etc/ipsec.conf
-sudo cp -f ~/Ubuntu-VPN/ipsec.secrets /etc/ipsec.secrets
-sudo cp -f ~/Ubuntu-VPN/strongswan.conf /etc/strongswan.conf
+sudo cp -f ~/Ubuntu-VPN/strongswan/ipsec.conf /etc/ipsec.conf
+sudo cp -f ~/Ubuntu-VPN/strongswan/ipsec.secrets /etc/ipsec.secrets
+sudo cp -f ~/Ubuntu-VPN/strongswan/strongswan.conf /etc/strongswan.conf
 
 # Sysctl Config
 # /sbin/iptables -t nat -A POSTROUTING -s 10.0.0.0/8 -o eth0 -j MASQUERADE
