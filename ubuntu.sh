@@ -7,9 +7,9 @@ git clone https://github.com/tz1006/Ubuntu-VPN.git
 
 # Install PPTP
 sudo apt-get install -y pptpd
-sudo cp -f ~/Ubuntu-VPN/options.pptpd /etc/ppp/options.pptpd
-sudo cp -f ~/Ubuntu-VPN/chap-secrets /etc/ppp/chap-secrets
-sudo cp -f ~/Ubuntu-VPN/pptpd.conf /etc/pptpd.conf
+sudo cp -f ~/Ubuntu-VPN/pptp/options.pptpd /etc/ppp/options.pptpd
+sudo cp -f ~/Ubuntu-VPN/pptp/chap-secrets /etc/ppp/chap-secrets
+sudo cp -f ~/Ubuntu-VPN/pptp/pptpd.conf /etc/pptpd.conf
 
 # Install IPsec
 sudo apt-get install -y strongswan strongswan-plugin-xauth-generic
