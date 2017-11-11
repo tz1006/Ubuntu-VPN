@@ -18,7 +18,7 @@ sudo cp -f ~/Ubuntu-VPN/strongswan/ipsec.secrets /etc/ipsec.secrets
 sudo cp -f ~/Ubuntu-VPN/strongswan/strongswan.conf /etc/strongswan.conf
 
 # Install sock5
-sudo apt-get install -y danted-server
+sudo apt-get install -y dante-server
 sudo cp -f ~/Ubuntu-VPN/danted/danted.conf /etc/danted.conf
 
 # Sysctl Config
