@@ -5,7 +5,7 @@
 
 sudo sed -i 's/^IPV6.*/IPV6=no/g' /etc/default/ufw
 sudo sed -i 's/^IPT_SYSCTL.*/IPT_SYSCTL=\/etc\/ufw\/sysctl.conf/g' /etc/default/ufw
-echo 'net\/ipv4\/ip_forward=1'>>/etc/ufw/sysctl.conf
+echo 'net/ipv4/ip_forward=1'>>/etc/ufw/sysctl.conf
 # sudo sed -i 's/^net\/ipv4\/conf\/all\/accept_redirects.*/net\/ipv4\/conf\/all\/accept_redirects=1/g' /etc/ufw/sysctl.conf
 # sudo sed -i 's/^net.ipv4.ip_forward.*/net.ipv4.ip_forward = 1/g' /etc/sysctl.conf
 
