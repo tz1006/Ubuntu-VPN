@@ -8,6 +8,7 @@ sudo sed -i 's/^IPT_SYSCTL.*/IPT_SYSCTL=\/etc\/ufw\/sysctl.conf/g' /etc/default/
 echo 'net/ipv4/ip_forward=1'>>/etc/ufw/sysctl.conf
 # sudo sed -i 's/^net\/ipv4\/conf\/all\/accept_redirects.*/net\/ipv4\/conf\/all\/accept_redirects=1/g' /etc/ufw/sysctl.conf
 # sudo sed -i 's/^net.ipv4.ip_forward.*/net.ipv4.ip_forward = 1/g' /etc/sysctl.conf
+sudo sysctl -p
 
 iptables -X
 /sbin/iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
