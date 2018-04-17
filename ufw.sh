@@ -27,6 +27,9 @@ sudo ufw allow 1723
 
 sudo ufw logging off
 sudo ufw disable && sudo ufw --force enable
+
+#iptables-save > /etc/iptables.rules
+#iptables-restore < /etc/iptables.rules
 # sudo ufw reset
 # https://gist.github.com/kimus/9315140
 # https://www.darrenfang.com/2014/01/install-pptp-vpn-on-ubuntu/
