@@ -12,6 +12,7 @@ sudo sysctl -p
 
 iptables -X
 /sbin/iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+sed -i '$i\/sbin/iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE'  /etc/rc.local
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw default allow forward
